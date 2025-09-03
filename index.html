@@ -10,8 +10,8 @@
 
   <!-- Header -->
   <header class="bg-green-700 text-white text-center py-6 shadow-lg">
-    <h1 class="text-3xl font-bold">Donasi untuk Desa Taman</h1>
-    <p class="text-lg">Bersama kita atasi masalah sampah 🌱</p>
+    <h1 class="text-3xl font-bold">Pengelolaan Sampah Desa Taman</h1>
+    <p class="text-lg">Semua Aksi Bermakna 🌱</p>
   </header>
 
   <!-- Hero -->
@@ -20,7 +20,7 @@
     <div class="relative z-10 max-w-2xl mx-auto px-4">
       <h2 class="text-4xl font-bold mb-4">Dukung Gerakan Bersih Desa</h2>
       <p class="mb-6">Donasi Anda membantu edukasi dan solusi pengelolaan sampah di Desa Taman.</p>
-      <a href="#" class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition">💚 Donasi Sekarang</a>
+      <a href="https://paypal.me/donation" target="_blank" class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition">💚 Donasi Sekarang</a>
     </div>
   </section>
 
@@ -38,7 +38,7 @@
   <!-- Donatur -->
   <section class="bg-green-100 py-10 px-6">
     <h2 class="text-2xl font-semibold text-center mb-6">Donatur Terbaru</h2>
-    <div class="max-w-3xl mx-auto grid gap-4">
+    <div id="donatur-list" class="max-w-3xl mx-auto grid gap-4">
       <div class="bg-white p-4 rounded-lg shadow">
         <p><strong>Ayu</strong>: Semoga bermanfaat ✨</p>
       </div>
@@ -48,6 +48,15 @@
       <div class="bg-white p-4 rounded-lg shadow">
         <p><strong>Citra</strong>: Sedikit rezeki untuk perubahan besar 🌍</p>
       </div>
+    </div>
+    <!-- Form komentar -->
+    <div class="max-w-3xl mx-auto mt-6 bg-white p-6 rounded-lg shadow">
+      <h3 class="text-lg font-semibold mb-4">Tinggalkan Komentar Donasi</h3>
+      <form id="donasiForm" class="space-y-4">
+        <input type="text" id="nama" placeholder="Nama Anda" class="w-full border rounded px-3 py-2">
+        <textarea id="komentar" placeholder="Komentar Anda" class="w-full border rounded px-3 py-2"></textarea>
+        <button type="submit" class="bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded">Kirim</button>
+      </form>
     </div>
   </section>
 
@@ -64,11 +73,59 @@
     </div>
   </section>
 
+  <!-- Background Masalah -->
+  <section class="bg-green-50 py-10 px-6">
+    <h2 class="text-xl font-bold text-center mb-6">Latar Belakang Permasalahan</h2>
+    <div class="max-w-3xl mx-auto text-gray-700">
+      <p>Desa Taman menghadapi masalah serius dalam pengelolaan sampah. Kurangnya pemahaman masyarakat tentang cara membuang dan memilah sampah menyebabkan timbunan di TPS ilegal. Kondisi ini menimbulkan bau, pencemaran, dan mengancam kesehatan lingkungan.</p>
+      <p class="mt-3">Dengan donasi Anda, kami dapat memberikan edukasi, menyediakan fasilitas pengelolaan, serta menciptakan lingkungan yang lebih bersih dan sehat untuk masyarakat.</p>
+    </div>
+  </section>
+
+  <!-- Aturan -->
+  <section class="bg-green-100 py-10 px-6">
+    <h2 class="text-xl font-bold text-center mb-6">Aturan Pengelolaan Sampah</h2>
+    <div class="max-w-3xl mx-auto grid gap-6">
+      <div class="bg-white p-4 rounded-lg shadow">
+        <p><strong>1.</strong> UU No. 18 Tahun 2008 – Pelanggaran pengelolaan sampah bisa dipidana 4–10 tahun dan/atau denda Rp100 juta–Rp5 miliar.</p>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow">
+        <p><strong>2.</strong> Mengimpor sampah ilegal bisa kena pidana 3–12 tahun dan denda Rp100 juta–Rp5 miliar.</p>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow">
+        <p><strong>3.</strong> Perda No. 2 Tahun 2019 – Buang sampah sembarangan kena denda Rp500.000. Warga yang melaporkan pelanggar dapat hadiah Rp100.000 dari hasil denda.</p>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow">
+        <p><strong>4.</strong> TPS ilegal & dumping terbuka bisa dipidana hingga 15 tahun penjara dan denda Rp15 miliar.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  <section class="bg-white py-10 px-6 text-center">
+    <h2 class="text-xl font-bold mb-4">Kontak Person</h2>
+    <p class="text-gray-700">Hubungi kami di <strong>+62 812-3456-7890</strong> atau email <strong>desa.taman@sampah.org</strong></p>
+  </section>
+
   <!-- Footer -->
   <footer class="bg-green-700 text-white text-center py-4 mt-6">
     <p>&copy; 2025 Gerakan Peduli Sampah. Semua hak dilindungi.</p>
   </footer>
 
+  <script>
+    // JS sederhana untuk tambah komentar donatur (frontend only)
+    document.getElementById("donasiForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const nama = document.getElementById("nama").value.trim();
+      const komentar = document.getElementById("komentar").value.trim();
+      if (nama && komentar) {
+        const newComment = document.createElement("div");
+        newComment.className = "bg-white p-4 rounded-lg shadow";
+        newComment.innerHTML = `<p><strong>${nama}</strong>: ${komentar}</p>`;
+        document.getElementById("donatur-list").prepend(newComment);
+        document.getElementById("donasiForm").reset();
+      }
+    });
+  </script>
 </body>
 </html>
-
