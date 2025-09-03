@@ -3,78 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pengelolaan Sampah - Donasi</title>
+  <title>Donasi Desa Taman</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-green-50 font-sans">
+
   <!-- Header -->
-  <header class="bg-green-600 text-white text-center py-6 shadow-lg">
-    <h1 class="text-3xl font-bold">Pengelolaan Sampah</h1>
-    <p class="text-lg">Semua Aksi Bermakna 🌱</p>
+  <header class="bg-green-700 text-white text-center py-6 shadow-lg">
+    <h1 class="text-3xl font-bold">Donasi untuk Desa Taman</h1>
+    <p class="text-lg">Bersama kita atasi masalah sampah 🌱</p>
   </header>
 
-  <!-- Hero Section -->
-  <section class="text-center py-8 px-4">
-    <h2 class="text-2xl font-semibold mb-4">Dukung Gerakan Kami</h2>
-    <p class="max-w-2xl mx-auto text-gray-700">Kami berkomitmen untuk mengedukasi masyarakat desa taman tentang pentingnya pengelolaan sampah yang benar. Donasi Anda membantu desa taman untuk mendapat edukasi terbaik dan anda dapat membantu masalah sampah yang terjadi di desa taman.</p>
-    <a href="https://paypal.me/donation" target="_blank" class="mt-6 inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition">💚 Donasi ke desa taman Sekarang</a>
-  </section>
-
-  <!-- Background Section -->
-  <section class="bg-white py-10 px-6">
-    <h2 class="text-xl font-bold text-center mb-6">Latar Belakang Masalah Sampah di Desa Taman</h2>
-    <div class="max-w-3xl mx-auto text-gray-700 space-y-4">
-      <p>Desa Taman menghadapi tantangan serius terkait pengelolaan sampah. Banyak warga masih membuang sampah secara sembarangan, termasuk ke sungai dan lahan kosong, yang menyebabkan pencemaran lingkungan.</p>
-      <p>Kurangnya kesadaran serta fasilitas pengelolaan sampah yang terbatas membuat masalah semakin kompleks. Hal ini tidak hanya berdampak pada kebersihan desa, tetapi juga kesehatan masyarakat dan kualitas lingkungan hidup.</p>
+  <!-- Hero -->
+  <section class="relative text-center text-white py-20 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80');">
+    <div class="bg-black/50 absolute inset-0"></div>
+    <div class="relative z-10 max-w-2xl mx-auto px-4">
+      <h2 class="text-4xl font-bold mb-4">Dukung Gerakan Bersih Desa</h2>
+      <p class="mb-6">Donasi Anda membantu edukasi dan solusi pengelolaan sampah di Desa Taman.</p>
+      <a href="#" class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition">💚 Donasi Sekarang</a>
     </div>
   </section>
 
-  <!-- Solusi Section -->
+  <!-- Progress Donasi -->
+  <section class="py-10 px-6 text-center">
+    <h2 class="text-2xl font-semibold mb-4">Progress Donasi</h2>
+    <div class="max-w-xl mx-auto">
+      <div class="w-full bg-gray-200 rounded-full h-6 overflow-hidden">
+        <div class="bg-green-600 h-6 text-xs text-right pr-2 flex items-center justify-end text-white font-semibold transition-all duration-500" style="width: 65%;">65%</div>
+      </div>
+      <p class="mt-3 text-gray-700">Rp65.000.000 dari target Rp100.000.000</p>
+    </div>
+  </section>
+
+  <!-- Donatur -->
   <section class="bg-green-100 py-10 px-6">
-    <h2 class="text-xl font-bold text-center mb-6">Solusi & Ide Penanganan</h2>
-    <div class="max-w-3xl mx-auto text-gray-700 space-y-4">
-      <p>Kami menawarkan beberapa langkah nyata untuk membantu mengatasi masalah sampah di Desa Taman:</p>
-      <ul class="list-disc pl-6 space-y-2">
-        <li>Edukasi warga tentang pemilahan sampah organik dan anorganik.</li>
-        <li>Mendirikan bank sampah desa untuk mengelola sampah bernilai ekonomis.</li>
-        <li>Mengadakan kegiatan gotong royong bersih desa secara rutin.</li>
-        <li>Mendorong kolaborasi dengan pemerintah dan komunitas peduli lingkungan.</li>
-      </ul>
-      <p>Dengan dukungan masyarakat dan donasi Anda, solusi ini bisa diwujudkan dan membawa perubahan nyata bagi lingkungan Desa Taman.</p>
-    </div>
-  </section>
-
-  <!-- Statistik Donasi -->
-  <section class="bg-white py-10 px-4 text-center">
-    <h2 class="text-xl font-bold mb-4">Transparansi Donasi</h2>
-    <div class="flex justify-center gap-10">
-      <div class="bg-green-100 p-6 rounded-xl shadow">
-        <p class="text-lg font-semibold">Jumlah Donatur</p>
-        <p id="total-orang" class="text-2xl font-bold text-green-700">0 Orang</p>
+    <h2 class="text-2xl font-semibold text-center mb-6">Donatur Terbaru</h2>
+    <div class="max-w-3xl mx-auto grid gap-4">
+      <div class="bg-white p-4 rounded-lg shadow">
+        <p><strong>Ayu</strong>: Semoga bermanfaat ✨</p>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow">
+        <p><strong>Budi</strong>: Ikut mendukung gerakan bersih desa 🙌</p>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow">
+        <p><strong>Citra</strong>: Sedikit rezeki untuk perubahan besar 🌍</p>
       </div>
     </div>
   </section>
 
-  <!-- Komentar Donatur -->
-  <section class="bg-green-100 py-10 px-6">
-    <h2 class="text-xl font-bold text-center mb-6">Komentar Donatur</h2>
-    <div class="max-w-3xl mx-auto">
-      <!-- Form Komentar -->
-      <form id="comment-form" class="mb-6">
-        <input type="text" id="nama" placeholder="Nama Anda" class="w-full p-3 border rounded-lg mb-3" required>
-        <textarea id="pesan" placeholder="Tulis komentar Anda..." class="w-full p-3 border rounded-lg mb-3" required></textarea>
-        <button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold">Kirim Komentar</button>
-      </form>
-
-      <!-- List Komentar -->
-      <div id="comment-list" class="space-y-4">
-        <p class="text-gray-500 text-center">Belum ada komentar.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Video Section -->
-  <section class="bg-white py-10 px-4 text-center">
+  <!-- Video Edukasi -->
+  <section class="bg-white py-10 px-6 text-center">
     <h2 class="text-xl font-bold mb-4">Tonton Video Edukasi</h2>
     <div class="mx-auto max-w-2xl aspect-video">
       <iframe class="w-full h-full rounded-lg shadow-md"
@@ -86,71 +64,11 @@
     </div>
   </section>
 
-<!-- Rules Section -->
-  <section class="bg-green-100 py-10 px-6">
-    <h2 class="text-xl font-bold text-center mb-6">Aturan Pengelolaan Sampah</h2>
-    <div class="max-w-3xl mx-auto grid gap-6">
-      <div class="bg-white p-4 rounded-lg shadow">
-        <p><strong>1.</strong> UU No. 18 Tahun 2008 – Pelanggaran pengolaan sampah bisa dipidana 4–10 tahun dan/atau denda Rp100 juta–Rp5 miliar.</p>
-      </div>
-      <div class="bg-white p-4 rounded-lg shadow">
-        <p><strong>2.</strong> Mengimpor sampah ilegal bisa kena pidana 3–12 tahun dan denda Rp100 juta–Rp5 miliar.</p>
-      </div>
-      <div class="bg-white p-4 rounded-lg shadow">
-        <p><strong>3.</strong> Perda No. 2 Tahun 2019 – Buang sampah sembarangan kena denda Rp500.000. Warga yang melaporkan pelanggar dapat hadiah Rp100.000 dari hasil denda.</p>
-      </div>
-      <div class="bg-white p-4 rounded-lg shadow">
-        <p><strong>4.</strong> TPS ilegal & dumping terbuka bisa dipidana hingga 15 tahun penjara dan denda Rp15 miliar.</p>
-      </div>
-    </div>
-  </section>
-  
-<!-- Kontak Person -->
-  <section class="bg-white py-10 px-6">
-    <h2 class="text-xl font-bold text-center mb-6">Kontak Person</h2>
-    <div class="max-w-2xl mx-auto text-center text-gray-700 space-y-2">
-      <p>📞 Telepon/WhatsApp: <a href="https://wa.me/628118891209" class="text-green-600 hover:underline">+62 811-8891-209</a></p>
-      <p>📧 Email: <a href="kenneth:thansagakenneth@gmail.com" class="text-green-600 hover:underline">thansagakenneth@gmail.com</a></p>
-      <p>📍 Lokasi: Desa Taman, Indonesia</p>
-    </div>
-  </section>
-
   <!-- Footer -->
-  <footer class="bg-green-600 text-white text-center py-4 mt-6">
+  <footer class="bg-green-700 text-white text-center py-4 mt-6">
     <p>&copy; 2025 Gerakan Peduli Sampah. Semua hak dilindungi.</p>
   </footer>
 
-  <!-- Script -->
-  <script>
-    const form = document.getElementById('comment-form');
-    const commentList = document.getElementById('comment-list');
-    const totalOrang = document.getElementById('total-orang');
-
-    let jumlahOrang = 0;
-
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      const nama = document.getElementById('nama').value;
-      const pesan = document.getElementById('pesan').value;
-
-      if (nama && pesan) {
-        jumlahOrang++;
-        totalOrang.textContent = `${jumlahOrang} Orang`;
-
-        const newComment = document.createElement('div');
-        newComment.classList.add('bg-white', 'p-4', 'rounded-lg', 'shadow');
-        newComment.innerHTML = `<p><strong>${nama}</strong></p><p>${pesan}</p>`;
-        
-        if (commentList.querySelector('p')) {
-          commentList.innerHTML = '';
-        }
-        commentList.prepend(newComment);
-
-        form.reset();
-      }
-    });
-  </script>
 </body>
 </html>
 
